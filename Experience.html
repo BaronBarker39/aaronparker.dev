@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+<title>aaronparker@aaronparker.dev</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <header id="header">
+
+
+    <h1><a class="headerText" href="/index.html">Home</a></h1>
+    <h1><a class="headerText" href="/Services.html">Services</a></h1>
+    <h1><a class="headerText" href="/Experience.html">Experience</a></h1>
+    
+
+
+
+  </header>
+
+<!-- Alternating contentImg and contentText order creates alternating layout.-->
+
+  <main id="main">
+   <div class="contentRow">
+        <img id="landingImg" src="Aaron2.png" alt="Aaron" class="image">
+
+        <h1 id="landingText">
+    
+
+  
+            Scroll down to see an incomplete portfolio.
+            <br><br>
+            <button><a class="buttonText" href="Resume.pdf">See my resume</a></button> 
+        </h1>
+
+  </div>
+    <div id="slideShow" class="contentRow">
+      <img id="contentImg" src="/Portfolio/Pokemon_Project/0.jpg" alt="Pokemon Data Mining Project" class="image">
+
+
+
+
+            <p id="contentText">
+                <b>Pokemon dataset mining</b>  
+                <br>  <br> 
+                R, GGplot2, WEKA, Excel
+                <br>
+                <button v-on:click="next">></button>
+                <br>
+                <button v-on:click="back"><</button>
+              </p>
+
+
+
+</div>
+
+    <div class="contentRow">
+            <p id="contentText">
+                <b>MLS2PubRec ETL software</b>  
+                <br>  <br> 
+                Java, JavaFX, Web Crawling, Data engineering
+            </p>
+
+<img id="contentImg" src="Portfolio2_MLS2PUBREC1.png" alt="Portfolio_" class="image"></div> 
+
+    </div>
+
+    <div class="contentRow">
+
+ <img id="contentImg" src="Portfolio3_StrawberriesAndCinnamon1.png" alt="Portfolio_" class="image">
+
+            <p id="contentText">
+              <b>Strawberries and Cinnamon Ecommerce</b>  
+              <br>  <br> 
+                Wordpress, Woocommerce, PHP, Html, CSS, JS, MySQL, GIMP
+            </p>
+         </div>
+    </div>
+    <div class="contentRow">
+        <p id="contentText">
+            This proj slot is empty
+        </p>
+        <img id="contentImg" src="Portfolio_.png" alt="Portfolio_" class="image">
+    </div>
+    
+  </main>
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+<script>
+      var slideShow = new Vue({
+    el: '#slideShow',
+    data: {
+        slideIter: 0
+
+    },
+    methods: {
+        next: function(event){
+                      this.slideIter=this.slideIter+1;
+            document.getElementById('contentImg').src = "/Portfolio/Pokemon_Project/" + this.slideIter + ".jpg";
+        },
+        back: function(event){
+                      this.slideIter=this.slideIter-1;
+            document.getElementById('contentImg').src = "/Portfolio/Pokemon_Project/" + this.slideIter + ".jpg";
+        }
+    }
+});
+</script>
