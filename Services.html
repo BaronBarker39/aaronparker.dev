@@ -11,8 +11,8 @@
 <body>
   <header id="header">
 
-    <h1><a class="headerText" href="/index.html">Home</a></h1>
-    <h1><a class="headerText" href="/Services.html">Services</a></h1>
+    <h1><a class="headerText" href="/index.html">About</a></h1>
+    <h1><a class="headerText" href="/Services.html">Contact</a></h1>
     <h1><a class="headerText" href="/Experience.html">Experience</a></h1>
     
 
@@ -22,20 +22,33 @@
 
 
   <main id="main">
+<div class="contentScreen"> 
+  <input type="text" id="firstName" name="firstName" placeholder="Name...">
+  <input type="text" id="email" name="email"  required="true" placeholder="Email address...">
+  <select id="serviceType" name="serviceType">
+    <option class="optionPlaceholder" value="" disabled selected>Subject...</option>
+    <option class="option" value="Web Development">Web Development</option>
+    <option class="option" value="Programming">Software Engineering</option>
+    <option class="option" value="Networking">Networking/IT support</option>
+    <option class="option" value="Data Science">Data Science</option>
+    <option class="option" value="Other">Other</option>
 
-   <div class="contentRow">
+  </select>
+  <textarea type="blockText" id="emailContent" placeholder="Describe the service you require...
+Examples:
+
+'I need a website for my dog's birthday party'
+
+'My computer won't start and it has files I need.'
+"name="emailContent"  ></textarea>
+  <input type="submit" value="Submit">
+</div>
+
  
-        <h1 id="landingText">
-My skillset can be applied to most things tech related! 
-<br><br>
-Email me to get started.
+  
 
-        </h1>
-        <h1 id="landingText">
-         
-         IT/Networking<br><br>Software/Web development <br><br> Model Building /Analytics.
-        </h1>
-    </div>
+
+     
   </main>
 
 

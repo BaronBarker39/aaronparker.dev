@@ -84,16 +84,113 @@ main{
   align-items: center;
 }
 
-button{
-  background-color: rgba(197, 191, 201, 0.514); ;
+.contentScreen{
+  padding-top: 10%;
+  padding-bottom: 10%;
+
+  height:100vh;
+  width:100vw;
+
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#slideShowImg {
+
+  border: none;
+
+  object-fit: fill;
+
+
+}
+
+.slideShowFrame{
+  height:50vh;
+  width:80vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.slideShowButton{
+max-width: 20px;
+border: 1px solid black; 
+cursor: pointer;
+
+background-color: rgba(197, 191, 201, 0.514);
+margin-left: 3px;
+margin-right: 3px;
+padding-left: 5px;
+padding-right: 5px;
+}
+
+.slideShowText{
+text-align: left;
+}
+select{
+  color:black;
+
+}
+.option{
+  color:black;
+
+}
+.optionPlaceholder{
+  color:gray;
+}
+input[type=text], select {
+  margin-bottom: 1%;
+  width: 60vw;
+  height: 10vh;
+
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+textarea[type=blockText] {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  width: 60vw;
+  height: 30vh;
+
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+}
+input[type=submit] {
+  width: 20vw;
+  height: 8vh;
+  background-color: #4CAF50;
+  color: white;
+
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.normalButton{
   border: 2px solid black; 
   display:inline-block;
+  background-color: rgba(197, 191, 201, 0.514);
+}
+
+button{
+
   transition-duration: 0.4s;
   text-align: center;
   text-decoration: none;
 
 }
-
 
 button:hover {
   background-color:rgba(195, 163, 212, 0.514);
@@ -101,7 +198,10 @@ button:hover {
 }
 
 img {
+  max-width:100%;
+  max-height:100%;
   border: 3px solid #000000;
+  object-fit: contain
 }
 
 p{
@@ -110,9 +210,9 @@ height:auto;
 }
 
 h1{
-  font-family: "Poppins";
+font-family: "Poppins";
 
-  width:auto;
+width:auto;
 height:auto;
 }
 #landingImg{
